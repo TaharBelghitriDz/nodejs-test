@@ -1,12 +1,11 @@
 import got from "got";
 import { URL } from "node:url";
+import "dotenv/config";
 
-// i know !! and it's instead of .env.example
-const baseUrl = "http://94.103.91.4:5000/clients";
+const baseUrl = process.env.BASELINK as string;
 
 // token needs to regenerate every 3 days
-const token =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRhaGFyIiwiaWQiOjYxNiwiaWF0IjoxNzMyNjQ2Mjk4LCJleHAiOjE3MzI5MDU0OTh9.rkyy85ZoG7XPUe4xgFwSG_nrl_Khjrs9e7xI9JA5mWU";
+const token = process.env.TOKEN as string;
 
 const getClients = async (query: { limit: number; offset: number }) => {
   const url = new URL(baseUrl);
