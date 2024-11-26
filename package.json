@@ -1,0 +1,24 @@
+{
+  "name": "nodejs-test",
+  "version": "1.0.0",
+  "type": "module",
+  "author": "tahar belghitri",
+  "main": "index.ts",
+  "description": "nodejs position test",
+  "license": "ISC",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tsx watch index.ts"
+  },
+  "dependencies": {
+    "@types/got": "^9.6.12",
+    "@types/node": "^22.10.0",
+    "@types/qs": "^6.9.17",
+    "got": "^14.4.5",
+    "qs": "^6.13.1",
+    "typescript": "^5.7.2"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.2"
+  }
+}
